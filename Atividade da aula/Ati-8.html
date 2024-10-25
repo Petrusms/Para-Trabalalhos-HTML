@@ -29,12 +29,16 @@
             let textDigitado = input.value;
             p.innerText = input.value;
 
-            if(textDigitado == "Chocolate"){
-                p.innerText = "Eu amo sorvete de chocolate.";
-            } else if(textDigitado == "Baunilha" && "Flocos"){
-                p.innerText = "Ahh, mas chocolate é o meu favorito...";
-            } else{
-                p.innerText = "Ahh, eu esperava um sabor de sorvete...";
+            if(textDigitado.length > 3){
+                if(textDigitado == "Chocolate"){
+                    p.innerText = "Eu amo sorvete de chocolate.";
+                } else if(textDigitado == "Baunilha" && "Flocos"){
+                    p.innerText = "Ahh, mas chocolate é o meu favorito...";
+                } else{
+                    p.innerText = "Ahh, eu esperava um sabor de sorvete...";
+                }
+            }else{
+                p.innerText = "Digite mais!!!";
             }
         });
     </script>
