@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; /* Alinha os itens na vertical */
+    height: auto; 
+    margin: 0; 
+    height: 100vh;
+}
+
+.container {
+    width: 90%; /* Largura do container */
+    max-width: 1200px; /* Largura máxima */
+}
+
+.trabalhos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte */
+    justify-content: center; /* Centraliza as imagens */
+    padding: 10px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+h3 {
+    text-align: center;
+    color: #f0a500;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+
+/* Media Queries para Responsividade */
+@media (min-width: 1920px) or (max-width: 1920px) {
+    img {
+        width: 180px; /* Aumenta o tamanho das imagens em telas grandes */
+        height: 180px; 
+    }
+
+    h3 {
+        font-size: 30px; /* Aumenta o tamanho do título em telas grandes */
+    }
+}
+
+@media screen and (max-width: 1620px) and (max-height: 2160px) {
+    img {
+        width: 160px; /* Ajusta o tamanho das imagens */
+        height: 160px; 
+    }
+
+    h3 {
+        font-size: 28px; /* Ajuste do tamanho do título */
+    }
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+    .trabalhos {
+        justify-content: space-around; /* Distribui as imagens uniformemente */
+    }
+
+    img {
+        width: 120px; /* Reduz o tamanho das imagens em telas menores */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    h3 {
+        font-size: 24px; /* Ajuste do tamanho do título */
+    }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+    img {
+        width: 100px; /* Reduz ainda mais o tamanho da imagem */
+    }
+
+    h3 {
+        font-size: 22px; /* Ajuste do tamanho do título */
+    }
+}
+
+@media screen and (max-width: 375px) and (max-height=667px) {
+    h3 {
+        font-size: 20px; /* Tamanho do título menor para telas pequenas */
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height=780px),
+screen and (max-width: 360px) and (max-height=640px) {
+    h3 {
+        font-size: 18px; /* Tamanho do título menor para telas muito pequenas */
+    }
+
+    img {
+        width: 80px; /* Tamanho da imagem reduzido para melhor legibilidade */
+    }
+}
