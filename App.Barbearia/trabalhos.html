@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalhos</title>
     <link rel="stylesheet" href="styles/trabalhosStyle.css">
 </head>
-
 <body>
-
     <div class="container">
-
         <div>
             <h3>Cortes de Cabelo</h3>
             <div class="trabalhos">
@@ -21,7 +17,6 @@
                 <img src="imagens/Corte4.jfif" alt="corte4">
             </div>
         </div>
-
         <div>
             <h3>Cortes de Barba</h3>
             <div class="trabalhos">
@@ -31,7 +26,6 @@
                 <img src="imagens/Barba4.jfif" alt="barba4">
             </div>
         </div>
-
         <div>
             <h3>Cabelos Platinados</h3>
             <div class="trabalhos">
@@ -41,8 +35,20 @@
                 <img src="imagens/Platina4.jfif" alt="platina4">
             </div>
         </div>
-
     </div>
+    
+    <script>
+        function aplicarEstilos() {
+        const backgroundColor = localStorage.getItem('backgroundColor') || 'white'
+        const h1Color = localStorage.getItem('h1Color') || 'black'
 
+        document.body.style.backgroundColor = backgroundColor
+        const h1 = document.querySelector('h1')
+            if (h1) {
+                h1.style.color = h1Color;
+            }
+        }
+        aplicarEstilos()
+    </script>
 </body>
 </html>

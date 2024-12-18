@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbeiros</title>
+    <link rel="stylesheet" href="styles/barbeirosStyle.css">
+</head>
+<body>
+    <h1>Barbeiros</h1>
+    <div class="container">
+        <div>
+            <h1>Rafael "O Artista"</h1>
+            <img src="imagens/Barbairo1.jfif" alt="barbeiro1">
+            <p>Rafael sempre teve uma paixão por arte, e isso se reflete em seu trabalho como barbeiro. Desde jovem, ele desenhava e pintava, mas foi ao descobrir a barbearia que encontrou sua verdadeira vocação. Ele é conhecido por criar cortes de cabelo que são verdadeiras obras-primas, utilizando técnicas de fade e design que impressionam seus clientes. Rafael acredita que cada corte deve contar uma história e se esforça para entender a personalidade de cada cliente antes de começar.</p>
+        </div>
+        <div>
+            <h1>Carlos "O Tradicionalista"</h1>
+            <img src="imagens/Barbeiro2.jfif" alt="barbeiro2">
+            <p>Carlos é um barbeiro que valoriza as tradições da barbearia clássica. Aprendeu o ofício com seu avô, que tinha uma barbearia no bairro há mais de cinquenta anos. Carlos é especialista em cortes clássicos e barbas bem aparadas, sempre utilizando técnicas que foram passadas de geração em geração. Ele acredita que a barbearia é mais do que apenas um trabalho; é uma forma de preservar a história e a cultura local.</p>
+        </div>
+        <div>
+            <h1>Bruno "O Estilista"</h1>
+            <img src="imagens/Barbeiro3.jfif" alt="barbeiro3">
+            <p>Bruno sempre foi apaixonado por moda e tendências. Antes de se tornar barbeiro, trabalhou como estilista em uma boutique famosa. Ele trouxe essa experiência para sua barbearia, onde combina cortes modernos com dicas de estilo pessoal. Bruno adora experimentar novas técnicas e produtos, sempre buscando o melhor para seus clientes. Seu lema é: "Um bom corte é apenas o começo; o verdadeiro estilo vem da confiança."</p>
+        </div>
+        <div>
+            <h1>Fernando "O Conector"</h1>
+            <img src="imagens/Barbeiro 4.jfif" alt="barbeiro4">
+            <p>Fernando é conhecido por sua habilidade em conectar pessoas. Além de ser um barbeiro talentoso, ele tem um talento especial para criar um ambiente amigável onde os clientes se sentem à vontade para conversar e fazer novas amizades. Ele acredita que a barbearia deve ser um espaço comunitário, onde todos se sintam bem-vindos. Fernando frequentemente organiza eventos na barbearia para promover a interação entre os clientes.</p>
+        </div>
+        <div>
+            <h1>Lucas "O Aventureiro"</h1>
+            <img src="imagens/Barbeiro 5.jfif" alt="barbeiro4">
+            <p>Lucas sempre teve um espírito aventureiro e uma paixão por viagens. Depois de explorar diferentes culturas ao redor do mundo, ele decidiu abrir sua própria barbearia, trazendo influências internacionais para seus cortes e estilos. Lucas é conhecido por suas técnicas inovadoras e pela capacidade de adaptar os estilos às preferências individuais dos clientes. Ele adora compartilhar histórias de suas viagens enquanto proporciona um corte incrível.</p>
+        </div>
+    </div>
+    <script>
+        function aplicarEstilos() {
+            const backgroundColor = localStorage.getItem('backgroundColor') || 'white'
+            const h1Color = localStorage.getItem('h1Color') || 'black'
+
+            document.body.style.backgroundColor = backgroundColor
+            const h1 = document.querySelectorAll('h1')
+                if (h1) {
+                    h1[0].style.color = h1Color
+                    h1[1].style.color = h1Color
+                    h1[2].style.color = h1Color
+                    h1[3].style.color = h1Color
+                    h1[4].style.color = h1Color
+                    h1[5].style.color = h1Color
+                }
+
+                const pColor = localStorage.getItem('pColor') || 'black'
+                const p = document.querySelectorAll('p')
+                if (p) {
+                    p[0].style.color = pColor
+                    p[1].style.color = pColor
+                    p[2].style.color = pColor
+                    p[3].style.color = pColor
+                    p[4].style.color = pColor
+                }
+            }
+        aplicarEstilos()
+    </script>
+</body>
+</html>

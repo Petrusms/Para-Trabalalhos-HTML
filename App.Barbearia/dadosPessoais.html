@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Pessoais</title>
+    <link rel="stylesheet" href="styles/DPStyle.css">
+</head>
+<body>
+    <h1>Dados Pessoais</h1>
+    <div>
+        <form id="agendamentoForm">
+            <label for="nome" id="mensagem"></label>
+
+            <label for="email" id="email"></label>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" required placeholder="Digite seu telefone">
+
+            <label for="data">Data Nasc:</label>
+            <input type="date" id="data" required>
+
+            <label for="senha" id="senha"></label>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function aplicarEstilos() {
+            const backgroundColor = localStorage.getItem('backgroundColor') || 'white'
+            const h1Color = localStorage.getItem('h1Color') || 'black'
+
+            document.body.style.backgroundColor = backgroundColor
+            const h1 = document.querySelector('h1')
+            if (h1) {
+                h1.style.color = h1Color
+            }
+        }
+        aplicarEstilos();
+
+        const nome = localStorage.getItem('nome') || 'Visitante'
+        const mensagem = document.getElementById('mensagem')
+        mensagem.textContent = `Nome: ${nome}`
+
+        const email = localStorage.getItem('email')
+        const Email = document.getElementById('email')
+        Email.textContent = `Email: ${email}`
+
+        const senha = localStorage.getItem('senha')
+        const Senha = document.getElementById('senha')
+
+        function ocultarSenha(senha) {
+            return '*'.repeat(senha.length);
+        }
+        Senha.textContent = `Senha: ${ocultarSenha(senha)}`
+    </script>
+</body>
+</html>
