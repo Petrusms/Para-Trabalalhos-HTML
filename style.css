@@ -1,0 +1,22 @@
+.sidebar {
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+}
+
+@media (max-width:995px) {
+    .sidebar {
+        position: fixed;
+        transform: translateX(-100%);
+        z-index: 1;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+}
