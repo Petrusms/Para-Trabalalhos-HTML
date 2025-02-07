@@ -8,4 +8,3 @@ function carregaArquivo(container, arquivo){
 }
 
 carregaArquivo('container-sidebar', 'sidebar.html')
-carregaArquivo('container-navbar', 'navbar.html')
